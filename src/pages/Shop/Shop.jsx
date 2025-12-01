@@ -7,7 +7,7 @@ import { Newsleatter } from '../../components/Newsletter/Newsleatter'
 export const Shop = () => {
   return (
     <Layout>
-      <Banner bgImage={'./public/images/banner/b1.jpg'} title={'stayhome'} subTitle={'Save more with Coupons & up to 70% off!'}/>
+      <Banner bgImage={'./images/banner/b1.jpg'} title={'stayhome'} subTitle={'Save more with Coupons & up to 70% off!'}/>
       <CardSection />
       <Newsleatter/>
     </Layout>

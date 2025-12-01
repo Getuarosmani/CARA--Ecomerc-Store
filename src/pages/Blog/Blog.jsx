@@ -6,7 +6,7 @@ import { BlogPost } from '../../components/Blog-Post/BlogPost'
 export const Blog = () => {
   return (
     <Layout>
-      <Banner bgImage={'./public/images/banner/b19.jpg'} title={'readmore'} subTitle={'Read all case studies about our products!'} className={'special'} />
+      <Banner bgImage={'./images/banner/b19.jpg'} title={'readmore'} subTitle={'Read all case studies about our products!'} className={'special'} />
       <BlogPost
         img={'images/blog/b1.jpg'}
         title={'The Cotton-Jersey Zip-Up Hoodie'}
