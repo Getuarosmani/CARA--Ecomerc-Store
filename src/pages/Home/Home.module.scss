@@ -1,0 +1,237 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/mixins.scss';
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-image: url(/public/images/hero4.png);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 80px;
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .text {
+
+            h3 {
+                font-size: 30px;
+
+                @include respond(mobile) {
+                    font-size: 25px;
+                }
+            }
+
+            h1 {
+                font-size: 60px;
+
+                & span {
+                    color: $primary-color;
+                }
+
+                @include respond(mobile) {
+                    font-size: 50px;
+
+                }
+            }
+
+            p {
+                font-size: 18px;
+
+                @include respond(mobile) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .button {
+        position: relative;
+        display: inline-block;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: none;
+            outline: none;
+            background: none;
+            color: $primary-color;
+            font-size: 17px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                font-size: 19px;
+                transition: all 0.3s;
+                color: darken($color: $primary-color, $amount: 10);
+
+            }
+        }
+    }
+}
+
+.sale-banner {
+    width: 100%;
+    background-image: url(/public/images/banner/b2.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 50px;
+
+    p {
+        color: $white;
+        font-size: 20px;
+    }
+
+    h2 {
+        color: $white;
+        margin-bottom: 30px;
+
+        span {
+            color: $red;
+        }
+    }
+
+    button {
+        outline: none;
+        border: none;
+        padding: 18px 40px;
+        border-radius: 5px;
+        font-size: 17px;
+        transition: all 0.3s;
+
+
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.banners {
+    margin-bottom: 90px;
+
+    .big-banners {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        .b1-banner {
+            background-image: url(/public/images/banner/b17.jpg);
+        }
+
+        .b2-banner {
+            background-image: url(/public/images/banner/b10.jpg);
+        }
+
+        .b1-banner,
+        .b2-banner {
+            width: calc(50% - 15px);
+            background-position: center;
+            background-size: cover;
+            padding: 120px 50px;
+            color: $white;
+
+            span {
+                font-size: 25px;
+                font-weight: 300;
+                font-style: italic;
+            }
+
+            h3 {
+                font-size: 40px;
+            }
+
+            p {
+                color: $white;
+                font-size: 18px;
+            }
+
+            button {
+                outline: 0;
+                padding: 15px 30px;
+                color: $white;
+                border-radius: 3px;
+                background-color: transparent;
+                border: solid 1px $white;
+                transition: all 0.3s;
+
+
+                &:hover {
+                    background-color: $primary-color;
+                    border: none;
+                    transition: all 0.3s;
+                }
+            }
+
+            @include respond(tablet) {
+                width: 90%;
+            }
+        }
+
+        @include respond(tablet) {
+            justify-content: center;
+        }
+    }
+
+    .small-banners {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        color: white;
+
+        .s1-banner {
+            background-image: url(/public/images/banner/b7.jpg);
+        }
+
+        .s2-banner {
+            background-image: url(/public/images/banner/b4.jpg);
+        }
+
+        .s3-banner {
+            background-image: url(/public/images/banner/b18.jpg);
+        }
+
+        .s1-banner,
+        .s2-banner,
+        .s3-banner {
+            width: calc(33.33% - 13.33px);
+            background-position: center;
+            background-size: cover;
+            padding: 120px 25px;
+
+            h3 {
+                font-size: 25px;
+            }
+
+            span {
+                color: $red;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            @include respond(tablet) {
+                width: 67%;
+            }
+        }
+
+        @include respond(tablet) {
+            justify-content: center;
+
+        }
+    }
+}

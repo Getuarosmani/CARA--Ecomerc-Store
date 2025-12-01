@@ -1,0 +1,81 @@
+@import './../../styles/_variables';
+@import './../../styles/mixins.scss';
+
+
+.newsleatter {
+    background-color: $dark-blue;
+    background-image: url(/public/images/banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: 25% 30%;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 20px;
+
+        h3 {
+            color: $white;
+            font-size: 40px;
+            opacity: 90%;
+        }
+
+        p {
+            color: $white;
+            opacity: 70%;
+
+            @include respond(laptop) {
+                margin-bottom: 50px;
+            }
+        }
+
+        span {
+            color: $gold;
+        }
+
+        form {
+            width: 40%;
+            background-color: $white;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 6px;
+            overflow: hidden;
+
+            input {
+                font-size: 18px;
+                border: none;
+                outline: none;
+                padding-left: 20px;
+
+                @include respond(desktop) {
+                    font-size: 16px;
+                    padding-left: 14px;
+                }
+            }
+
+            button {
+                padding: 20px 40px;
+                border: none;
+                outline: none;
+                background-color: $primary-color;
+                color: $white;
+
+                @include respond(desktop) {
+                    padding: 10px 20px;
+                }
+            }
+
+            @include respond(desktop) {
+                width: 60%;
+            }
+
+            @include respond(tablet) {
+                width: 100%;
+            }
+        }
+
+        @include respond(laptop) {
+            flex-direction: column;
+        }
+    }
+}

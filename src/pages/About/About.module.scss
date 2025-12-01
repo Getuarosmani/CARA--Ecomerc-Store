@@ -1,0 +1,109 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+
+.about {
+    .first-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 200px;
+
+        .left {
+            width: 48%;
+            height: auto;
+
+            image {
+                width: 100%;
+            }
+
+            @include respond(laptop) {
+                width: 80%;
+                margin-bottom: 50px;
+            }
+
+            @include respond(mobile) {
+                width: 100%;
+            }
+        }
+
+        .right {
+            width: 48%;
+
+            marquee {
+                background-color: rgba(128, 128, 128, 0.13);
+                padding: 7px;
+                color: $light-black;
+                border-radius: 4px;
+
+            }
+
+            @include respond(laptop) {
+                width: 75%;
+            }
+
+            @include respond(mobile) {
+                width: 90%;
+            }
+        }
+
+        @include respond(laptop) {
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+    }
+
+    .video-title {
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 80px;
+
+        span {
+            color: $primary-color;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 7px;
+                background-color: $primary-color;
+                bottom: -2px;
+                left: 0;
+                transition: all 0.3s;
+                border-radius: 5px;
+            }
+
+            &:hover::after {
+                width: 60%;
+                transition: all 0.3s;
+            }
+        }
+
+        @include respond(mobile) {
+            font-size: 50px;
+        }
+    }
+
+    .video-holder {
+        width: 90%;
+        height: auto;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 18px;
+        margin-bottom: 70px;
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 18px;
+
+        }
+
+        @include respond(mobile) {
+            width: 100%;
+        }
+    }
+}

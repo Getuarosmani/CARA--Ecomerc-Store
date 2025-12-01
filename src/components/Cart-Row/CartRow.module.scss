@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+tr {
+
+    td {
+        padding: 10px 0;
+        color: $grey;
+
+        i {
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover{
+                scale: 1.2;
+                transition: all 0.3s;
+                color: black;
+            }
+        }
+
+        .img-holder {
+            width: 100px;
+            height: auto;
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        input {
+            width: 40px;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    }
+}

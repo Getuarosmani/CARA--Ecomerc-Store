@@ -1,0 +1,118 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+@import '../../styles/animations.scss';
+
+.cart {
+
+    .table-holder {
+        max-height: 500px;
+        overflow-y: auto;
+        margin-bottom: 100px;
+
+        table {
+            width: 100%;
+            min-width: 760px;
+            text-align: center;
+
+            thead {
+                border-bottom: solid 1px $grey;
+                border-top: solid 1px $grey;
+
+                td {
+                    padding: 25px 0;
+                }
+            }
+
+
+        }
+
+    }
+
+    .bottom-cart-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        .coupon-section {
+
+            h3 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            input {
+                width: 350px;
+                height: 40px;
+                outline: none;
+                border: solid 1px $grey;
+                border-radius: 3px;
+                margin-right: 5px;
+                padding-left: 10px;
+
+                @include respond(desktop) {
+                    width: 300px;
+                }
+
+                @include respond(mobile) {
+                    width: 100%;
+                    margin-bottom: 10px;
+
+                }
+            }
+
+            button {
+                height: 40px;
+                padding: 0 26px;
+                @include button;
+            }
+
+            @include respond(desktop) {
+                width: auto;
+                padding: 0 80px;
+                margin-bottom: 120px;
+            }
+
+            @include respond(desktop) {
+                padding: 0;
+            }
+        }
+
+        .cart-total {
+            margin-bottom: 50px;
+
+            h3 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            table {
+                margin-bottom: 30px;
+
+                tr,
+                td {
+                    border: solid 1px $grey;
+                    width: 300px;
+                    padding: 10px 7px;
+
+                    @include respond(desktop) {
+                        width: 250px;
+                    }
+                }
+            }
+
+            button {
+                @include button;
+                padding: 13px 30px;
+            }
+
+            @include respond(desktop) {
+                width: auto;
+            }
+        }
+
+        @include respond(laptop) {}
+    }
+
+
+}

@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+@import '../../styles/animations.scss';
+ 
+.container {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .left {
+        width: 40%;
+        margin-right: 50px;
+        margin-bottom: 70px;
+    }
+
+    .img-holder {
+        width: 100%;
+        height: auto;
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .right {
+        width: 50%;
+
+        h3 {
+            font-size: 35px;
+
+            &:first-of-type {
+                margin-bottom: 30px;
+            }
+        }
+
+        span {
+            display: block;
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        select {
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px 17px;
+            border-radius: 3px;
+            color: $grey;
+            outline: none;
+        }
+
+        input {
+            width: 50px;
+            padding: 10px;
+            margin-right: 15px;
+            outline: none;
+            border-radius: 3px;
+            margin-bottom: 60px;
+        }
+
+        button {
+            height: 47px;
+            padding: 0 20px;
+            @include button;
+            transition: all 0.3s;
+            margin-bottom: 60px;
+
+            &:active{
+                transform: scale(1.05);
+            }
+
+
+            &:hover {
+                background-color: darken($color: $primary-color, $amount: 10);
+                transition: all 0.3s;
+            }
+        }
+
+        
+
+    }
+}

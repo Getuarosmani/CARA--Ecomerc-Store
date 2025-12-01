@@ -1,0 +1,23 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables';
+
+.services {
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @include respond(desktop) {
+            gap: 60px;
+        }
+
+        @include respond(tablet) {
+            gap: 70px;
+        }
+
+        @include respond(mobile) {
+            justify-content: center;
+        }
+    }
+}

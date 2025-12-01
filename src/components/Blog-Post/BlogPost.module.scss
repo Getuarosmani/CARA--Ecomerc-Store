@@ -1,0 +1,85 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+
+.blog-post {
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 200px;
+
+        .left {
+            background-size: cover;
+            background-position: center;
+            width: 47%;
+            position: relative;
+            height: 400px;
+
+            .date {
+                position: absolute;
+                top: -108px;
+                font-size: 100px;
+                font-weight: 500;
+                z-index: -1;
+                opacity: 50%;
+            }
+
+            @include respond(mobile) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        .right {
+            width: 47%;
+
+            h3 {
+                font-size: 24px;
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 18px;
+                position: relative;
+                transition: all 0.3s;
+                cursor: pointer;
+
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 2px;
+                    background-color: black;
+                    top: 14px;
+                    right: -54px;
+                    transition: all 0.3s;
+
+
+
+                }
+
+                &:hover {
+                    color: $primary-color;
+                    transition: all 0.3s;
+                }
+
+                &:hover::after {
+                    background-color: $primary-color;
+                    transition: all 0.3s;
+
+                }
+            }
+
+            @include respond(mobile) {
+                width: 85%;
+            }
+        }
+
+        @include respond(mobile) {
+            justify-content: center;
+        }
+    }
+}

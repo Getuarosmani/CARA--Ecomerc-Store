@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+@import '../../styles/mixins.scss';
+
+.banner {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 120px;
+
+    &.special {
+        margin-bottom: 200px;
+        background-position: top;
+    }
+
+    .container {
+        text-align: center;
+        padding: 140px 0;
+
+        h2 {
+            color: $white;
+
+            @include respond(mobile) {
+                font-size: 40px;
+            }
+        }
+
+        p {
+            color: $white;
+            font-size: 18px;
+            font-size: 16px;
+        }
+    }
+}
