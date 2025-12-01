@@ -38,8 +38,8 @@ export const ProductDetalis = () => {
       quantity: quantity
     });
 
-    setSize("");       
-    setQuantity(1);  
+    setSize("");
+    setQuantity(1);
   };
 
   return (
@@ -48,7 +48,7 @@ export const ProductDetalis = () => {
         <div className={`container ${style.container}`}>
           <div className={style.left}>
             <div className={style['img-holder']}>
-              <img src={product.image} alt={product.name} />
+              <img src={`${import.meta.env.BASE_URL}${product.image}`} alt={product.name} />
             </div>
           </div>
 
