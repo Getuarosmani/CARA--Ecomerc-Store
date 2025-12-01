@@ -41,7 +41,7 @@ export const Navbar = () => {
     <nav>
       <div className={styles.navbar}>
         <div className={styles['logo-holder']}>
-          <img src="/images/logo.png" alt="logo" />
+          <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="logo" />
         </div>
         {menuOpen && <div className={styles.overlay} />}
         <ul className={menuOpen ? styles.open : ''}>
