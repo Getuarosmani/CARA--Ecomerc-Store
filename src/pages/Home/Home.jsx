@@ -17,7 +17,7 @@ export const Home = () => {
               <h1>Super value deals <span><br />On all products</span></h1>
               <p>Save more with coupons & up to 70%off!</p>
               <div className={style.button}>
-                <img src="/images/button.png" alt="button-desing" />
+                <img src={`${import.meta.env.BASE_URL}/images/button.png`} alt="button-desing" />
                 <button>Shop Now</button>
               </div>
             </div>
@@ -75,7 +75,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <Newsleatter/>
+        <Newsleatter />
       </div>
     </Layout>
   )

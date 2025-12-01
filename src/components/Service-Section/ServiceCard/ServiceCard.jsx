@@ -5,7 +5,7 @@ export const ServiceCard = ({ images, background, text }) => {
     return (
         <div className={style.card}>
             <div className={style['img-holder']}>
-                <img src={`/images/features/${images}`} alt="" />
+                <img src={`${import.meta.env.BASE_URL}images/features/${images}`} alt="" />
             </div>
             <div className={style.textbox} style={{ backgroundColor: `var(${background})` }}>
                 <p>{text}</p>

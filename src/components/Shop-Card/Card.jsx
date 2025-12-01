@@ -15,7 +15,7 @@ export const Card = ({ id, brand, img, productName, review, price }) => {
         <div className={style.card}>
             <Link to={`/product/${id}`}>
                 <div className={style['img-holder']}>
-                    <img src={img} alt={productName} />
+                    <img src={`${import.meta.env.BASE_URL}${img}`} alt={productName} />
                 </div>
                 <p>{brand}</p>
                 <h4>{productName}</h4>

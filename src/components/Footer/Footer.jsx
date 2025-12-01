@@ -6,7 +6,7 @@ export const Footer = () => {
         <footer>
             <div className={`container ${style.container}`}>
                 <div className={style.contact}>
-                    <img src="/images/logo.png" alt="" />
+                    <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Logo" />
                     <h4>Contact</h4>
                     <div className={style['contact-data']}>
                         <p><span>Address:</span> 562 wellington Road.Street 32.San Francisco</p>
@@ -48,11 +48,11 @@ export const Footer = () => {
                     <h4>Install App</h4>
                     <p>From App Store or Google Play</p>
                     <div className={style.stores}>
-                        <img src="/images/pay/app.jpg" alt="app-store" />
-                        <img src="/images/pay/play.jpg" alt="play-store" />
+                        <img src={`${import.meta.env.BASE_URL}images/pay/app.jpg`} alt="app-store" />
+                        <img src={`${import.meta.env.BASE_URL}images/pay/play.jpg`} alt="play-store" />
                     </div>
                     <p>Secured Payment Gateways</p>
-                    <img src="/images/pay/pay.png" alt="" />
+                    <img src={`${import.meta.env.BASE_URL}images/pay/pay.png`} alt="" />
                 </div>
             </div>
             <p className={style.copyright}>© {new Date().getFullYear()} Getuar Osmani — All Rights Reserved.</p>
