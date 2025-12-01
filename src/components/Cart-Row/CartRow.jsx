@@ -12,7 +12,7 @@ export const CartRow = ({ product }) => {
       </td>
       <td>
         <div className={style['img-holder']}>
-          <img src={product.img} alt={product.name} />
+          <img src={`${import.meta.env.BASE_URL}${product.img}`} alt={product.name} />
         </div>
       </td>
       <td>{product.name}</td>
